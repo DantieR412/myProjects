@@ -23,5 +23,7 @@ FPGA-based LED effects controller built with a custom AXI IP, controlled by a Mi
 * brightness(0-100%, with PWM).
 
 -Created the system design block, powered by the MicroBlaze processor, integrated the custom peripheral IP and UART IP for serial communication.
+
 -Developed a C code, where the parameters are accessed via the peripheral memory addresses.
+
 -Developed a Python code for a GUI which communicates with the COM port to the FPGA through the serial cable.

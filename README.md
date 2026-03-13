@@ -13,6 +13,7 @@ Interested in FPGA based systems and embedded programming - but open to anything
 # Projects
 
 ## FPGA Embedded LED Controller
+# DEMO : https://www.youtube.com/watch?v=eJfeQOS3ic8
 
 FPGA-based LED effects controller built with a custom AXI IP, controlled by a MicroBlaze system and a Python GUI over UART.
 

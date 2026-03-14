@@ -7,7 +7,7 @@ Interested in FPGA based systems and embedded programming - but open to anything
 
 * AMD Vivado™ Design Suite - Verilog IP-core developing and system designs
 * AMD Vitis™ Unified Software Platform  - C applications used for platforms created from bitstream generated files
-* Microsoft Visual Studio Code - Python applications for interaction: human-FPGA through computer interface
+* Visual Studio Code - Python applications for interaction: human-FPGA through computer interface
 * FPGA board - Digilent Nexys 4 DDR https://digilent.com/reference/programmable-logic/nexys-4-ddr/start?srsltid=AfmBOoqPtY8xdySjfTk6pNta6xX6cTdtBJwg6BfXt02vmRZH6LxWO5sT
   
 # Projects

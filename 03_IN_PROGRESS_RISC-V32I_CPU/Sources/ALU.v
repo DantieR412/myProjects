@@ -11,7 +11,7 @@ module ALU(
     
     assign zero = (result == 32'b0); //used for BEQ/BNE instructions
     
-    always@(a,b,alu_sel) begin
+    always@(*) begin
         case(alu_sel)
             4'b0000: result = a + b;                                        //ADD
             4'b0001: result = a - b;                                        //SUB

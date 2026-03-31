@@ -11,7 +11,7 @@ module reg_file_tb;
     reg [31:0] wdata;
     wire [31:0] rdata1;
     wire [31:0] rdata2;
-    wire [4:0] dbg_sel;
+    reg [4:0] dbg_sel;
     wire [31:0] dbg_data;
     
     // DUT
@@ -52,6 +52,7 @@ module reg_file_tb;
         rs2 = 0;
         rd = 0;
         wdata = 0;
+        dbg_sel = 0;
         
         //reset test
         #10;
@@ -129,8 +130,18 @@ module reg_file_tb;
         check(rdata1, 32'h77777777, "Port 1 same read");
         check(rdata2, 32'h77777777, "Port 2 same read");
         
-        //another reset test
+        //debug port test
+        we = 1;
+        rd = 5'd8;
+        wdata = 32'habcabcab;
+        #10;
         
+        we = 0;
+        dbg_sel = 5'd8;
+        #10;
+        check(dbg_data, 32'habcabcab, "Debug port write and read test");
+ 
+        //another reset test       
         rst = 1;
         #10;
         check(rdata1, 32'h0, "Port 1 reset");

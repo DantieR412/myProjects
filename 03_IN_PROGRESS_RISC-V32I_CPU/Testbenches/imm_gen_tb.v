@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module imm_gen_tb;
+module imm_gen_tb();
 
     reg  [31:0] instr;
     wire [31:0] imm;

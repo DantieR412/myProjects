@@ -23,8 +23,8 @@ module reg_file(
     
     
     integer i;
-    always@(posedge clk or posedge rst) begin
-        if(rst) begin
+    always@(posedge clk) begin
+        if(rst) begin //synchronous reset
             for(i = 1; i <= 31; i = i + 1) begin
                 regs[i] <= 32'd0;
             end

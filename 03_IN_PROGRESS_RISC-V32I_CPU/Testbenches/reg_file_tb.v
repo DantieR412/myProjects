@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module reg_file_tb;
+module reg_file_tb();
 
     reg clk;
     reg rst;

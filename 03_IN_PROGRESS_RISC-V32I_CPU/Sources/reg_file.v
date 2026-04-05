@@ -17,9 +17,9 @@ module reg_file(
     
     reg [31:0] regs [1:31]; //index 0 not written - always returns 0 when it is being read
     
-    assign rdata1 = (rs1 == 5'd0) ? 32'd0 : (we && rs1 == rd && rd != 5'd0) ? wdata : regs[rs1];
-    assign rdata2 = (rs2 == 5'd0) ? 32'd0 : (we && rs2 == rd && rd != 5'd0) ? wdata : regs[rs2];   //asyncrounhous reads
-    assign dbg_data = (dbg_sel == 5'd0) ? 32'd0 : (we && dbg_sel == rd && rd != 5'd0) ? wdata: regs[dbg_sel];
+    assign rdata1   = (rs1     == 5'd0) ? 32'd0 : regs[rs1];
+    assign rdata2   = (rs2     == 5'd0) ? 32'd0 : regs[rs2];
+    assign dbg_data = (dbg_sel == 5'd0) ? 32'd0 : regs[dbg_sel];
     
     
     integer i;

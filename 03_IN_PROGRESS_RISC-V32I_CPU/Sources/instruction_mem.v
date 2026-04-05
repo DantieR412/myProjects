@@ -103,7 +103,7 @@ module instruction_mem(
     // bne x3, x0, -24  (jump back 6 instructions to INSTR_4)
     // imm = -24 = 13'b1_1111_1110_1000
     // imm[12]=1, imm[11]=1, imm[10:5]=111110, imm[4:1]=1000
-    localparam INSTR_10 = {1'b1, 6'b111111, X0, X3, F3_BNE, 4'b0100, 1'b1, OP_BRANCH};
+    localparam INSTR_10 = {1'b1, 6'b111111, X0, R3, F3_BNE, 4'b0100, 1'b1, OP_BRANCH};
 
     // jal x0, 0  → halt (jumps to itself forever)
     localparam INSTR_11 = {1'b0, 10'b0, 1'b0, 8'b0, X0, OP_JAL};

@@ -72,7 +72,7 @@ module instruction_mem(
     localparam ZERO      = 12'd0;
     localparam ONE       = 12'd1;
     localparam TEN       = 12'd10;
-    localparam BASE_ADDR = 12'd256; //results stored from byte address 256
+    localparam BASE_ADDR = 12'd0; //results stored from byte address 256
     localparam FOUR      = 12'd4;
     localparam NEG_ONE   = 12'hFFF; //-1 in 12 bit two complement
     
